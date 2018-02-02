@@ -25,6 +25,14 @@ public class LaunchArcRenderer : MonoBehaviour {
 
 	}
 
+	void OnValidate()
+	{
+		//check that lr is not null and that game is playing
+		if (lr != null && Application.isPlaying) {
+			RenderArc ();
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		RenderArc ();
@@ -60,7 +68,8 @@ public class LaunchArcRenderer : MonoBehaviour {
 	Vector3 CalculateArcPoint(float t, float maxDistance)
 	{
 		float x = t * maxDistance;
-		float y = ;
+		float y = x * Mathf.Tan(radianAngle) - ((g*x*x)/(2*velocity*velocity*Mathf.Cos(radianAngle)*Mathf.Cos(radianAngle) ));	//hieght at x formula
+		return new Vector3(x,y);
 	}
 
 }

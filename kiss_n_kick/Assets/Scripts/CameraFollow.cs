@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		target = GameObject.Find ("indian 1_5").transform;	//reference for the player's position
+		target = GameObject.Find ("avatar").transform;	//reference for the player's position
 	}
 	
 	// LateUpdate to make sure the player has moved

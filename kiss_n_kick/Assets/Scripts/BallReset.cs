@@ -17,11 +17,11 @@ public class BallReset : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (touchingTheGround) {
-			rb.velocity = Vector3.zero;
-			//rb.angularVelocity = Vector3.zero;
-			rb.isKinematic = true;
-		}
+//		if (touchingTheGround) {
+//			rb.velocity = Vector3.zero;
+//			//rb.angularVelocity = Vector3.zero;
+//			rb.isKinematic = true;
+//		}
 
 	}
 

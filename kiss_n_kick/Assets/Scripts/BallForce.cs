@@ -54,7 +54,8 @@ public class BallForce : MonoBehaviour {
 				Vector2 angle = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				//
 
-				rb.isKinematic = false;
+				//rb.isKinematic = false;
+				Debug.Log ("shooting? magnitude: " + (angle * launchForce).magnitude);
 				rb.AddForce (angle * launchForce, ForceMode2D.Impulse);
 			}
 				
@@ -70,17 +71,21 @@ public class BallForce : MonoBehaviour {
 
 		if (ballMoving) {
 			
-			Debug.Log("hit ground");
+			Debug.Log("hit ground: " + gameObject.name);
 			rb.velocity = Vector3.zero;
-			//rb.angularVelocity = Vector3.zero;
-			rb.isKinematic = true;
+			rb.angularVelocity = 0f;
+			transform.eulerAngles = Vector3.zero;
+			//rb.isKinematic = true;
+			ballMoving = false;
+
 		}
 	}
 
 	void OnTriggerEnter2D (Collider2D c) {
 		if (c.gameObject.tag == "Player") {
 			inShootMode = true;
-		} else if (c.gameObject.tag == "ground") {
+		}
+		else if (c.gameObject.tag == "ground") {
 			ballMoving = true;
 		} 
 	}

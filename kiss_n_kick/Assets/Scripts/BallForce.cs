@@ -55,7 +55,7 @@ public class BallForce : MonoBehaviour {
 				//
 
 				//rb.isKinematic = false;
-				Debug.Log ("shooting? magnitude: " + (angle * launchForce).magnitude);
+				//Debug.Log ("shooting? magnitude: " + (angle * launchForce).magnitude);
 				rb.AddForce (angle * launchForce, ForceMode2D.Impulse);
 			}
 				

@@ -1,9 +1,41 @@
 fileFormatVersion: 2
 guid: 592b5a9b8567e1843ba3ad4b61fcebf3
-timeCreated: 1522241123
+timeCreated: 1522776777
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: palm_1_kick_0
+    21300002: palm_1_kick_1
+    21300004: palm_1_kick_2
+    21300006: palm_1_kick_3
+    21300008: palm_1_kick_4
+    21300010: palm_1_kick_5
+    21300012: palm_1_kick_6
+    21300014: palm_1_kick_7
+    21300016: palm_1_kick_8
+    21300018: palm_1_kick_9
+    21300020: palm_1_kick_10
+    21300022: palm_1_kick_11
+    21300024: palm_1_kick_12
+    21300026: palm_1_kick_13
+    21300028: palm_1_kick_14
+    21300030: palm_1_kick_15
+    21300032: palm_1_kick_16
+    21300034: palm_1_kick_17
+    21300036: palm_1_kick_18
+    21300038: palm_1_kick_19
+    21300040: palm_1_kick_20
+    21300042: palm_1_kick_21
+    21300044: palm_1_kick_22
+    21300046: palm_1_kick_23
+    21300048: palm_1_kick_24
+    21300050: palm_1_kick_25
+    21300052: palm_1_kick_26
+    21300054: palm_1_kick_27
+    21300056: palm_1_kick_28
+    21300058: palm_1_kick_29
+    21300060: palm_1_kick_30
+    21300062: palm_1_kick_31
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -68,7 +100,423 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: palm_1_kick_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 332
+        width: 22
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 332
+        width: 22
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 331
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 330
+        width: 23
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 330
+        width: 24
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 331
+        width: 24
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 267
+        width: 24
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 268
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 268
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 268
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 268
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_11
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 268
+        width: 27
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 204
+        width: 27
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 204
+        width: 28
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_14
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 204
+        width: 28
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_15
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 203
+        width: 29
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_16
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 203
+        width: 29
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_17
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 204
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 140
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_19
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 140
+        width: 36
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_20
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 140
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 140
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 140
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_23
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 140
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_24
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 76
+        width: 28
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 76
+        width: 30
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_26
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 76
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_27
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 76
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_28
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 76
+        width: 23
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_29
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 76
+        width: 22
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_30
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 12
+        width: 22
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palm_1_kick_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 12
+        width: 22
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

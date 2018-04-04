@@ -12,12 +12,9 @@ public class Player : MonoBehaviour {
 
 	private bool facingRight;
 
-	public bool nearBall;
-
 	void Start()
 	{
 		facingRight = true;	//starting off facing right
-		nearBall = false;
 		myRigidbody = GetComponent<Rigidbody2D> (); 
 		myAnimator = GetComponent<Animator> ();
 	}
@@ -50,9 +47,22 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	private void Kick ()
-	{
-		
+	void OnTriggerEnter2D (Collider2D c) {
+		if (c.gameObject.tag == "kickable") {
+			if (Input.GetMouseButtonDown (0)) {
+				Debug.Log ("kick ready " + gameObject.name);
+				myAnimator.SetBool ("charge", true);
+			}
+		}
+		else if (c.gameObject.tag == "kickable" && Input.GetMouseButtonUp (0)) {
+			myAnimator.SetBool("charge", false);
+		} 
 	}
+
+	void OnTriggerExit2D (Collider2D c) {
+		if (c.gameObject.tag == "kickable") {
+			myAnimator.SetBool("finishkick", true);
+		}	
+}
 }
 

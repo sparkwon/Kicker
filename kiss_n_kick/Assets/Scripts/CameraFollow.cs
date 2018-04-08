@@ -15,16 +15,40 @@ public class CameraFollow : MonoBehaviour {
 
 	private Transform target;
 
+	public float camSize;
+	public float camSizeLimit;
+	public float increment;
+	public float timeLerp;
+	public float timeLerpValue;
+
+
 
 	// Use this for initialization
 	void Start () {
 		target = GameObject.Find ("avatar").transform;	//reference for the player's position
 	}
 	
+
+	void Update()
+	{
+		camSize = Camera.main.orthographicSize;	
+
+
+	}
+
 	// LateUpdate to make sure the player has moved
 	void LateUpdate () 
 	{
 		transform.position = new Vector3 (Mathf.Clamp (target.position.x, xMin, xMax),
 			Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
+	}
+
+	void ZoomIn()
+	{
+		
+	}
+
+	void ZoomOut()
+	{
 	}
 }

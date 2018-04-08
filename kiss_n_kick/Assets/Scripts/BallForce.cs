@@ -8,20 +8,24 @@ public class BallForce : MonoBehaviour {
 	bool isDraggingOnBall = false;
 	bool ballMoving = false;
 
-	public float launchForce;
-	public float maxDragDistance = 2f;
+	float launchForce = 5;
+	public float launchCalc;
 
-	public GameObject obstacle;
+	public float trajectoryPathCompensation;
+	//public float maxDragDistance = 2f;
 
-	public Rigidbody2D kickPoint;
+
+	//public GameObject obstacle;
+
+	//public Rigidbody2D kickPoint;
 	Rigidbody2D rb;
 
 
 
 	//Variables for arc renderer
 	public LineRenderer sightLine;
-	public int segmentCount = 25;
-	public float segmentScale = 1;
+	public int segmentCount = 55;
+	public float segmentScale = 0.25f;
 
 	private Collider _hitObject;
 	public Collider hitObject {get {return _hitObject;}}
@@ -52,9 +56,8 @@ public class BallForce : MonoBehaviour {
 
 				// code here for launching ball. Middle of circle - mouse pos
 				Vector2 angle = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-				//
 
-				//rb.isKinematic = false;
+
 				//Debug.Log ("shooting? magnitude: " + (angle * launchForce).magnitude);
 				rb.AddForce (angle * launchForce, ForceMode2D.Impulse);
 			}
@@ -75,7 +78,6 @@ public class BallForce : MonoBehaviour {
 			rb.velocity = Vector3.zero;
 			rb.angularVelocity = 0f;
 			transform.eulerAngles = Vector3.zero;
-			//rb.isKinematic = true;
 			ballMoving = false;
 
 		}
@@ -105,7 +107,7 @@ public class BallForce : MonoBehaviour {
 
 		Vector2 angle = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-		Vector3 segVelocity = angle * launchForce;
+		Vector3 segVelocity = angle * launchForce * trajectoryPathCompensation;
 
 		_hitObject = null;
 

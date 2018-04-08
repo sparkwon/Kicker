@@ -19,6 +19,17 @@ public class Player : MonoBehaviour {
 		myAnimator = GetComponent<Animator> ();
 	}
 
+	void Update () {
+		if (Input.GetMouseButtonDown (0)) {
+			myAnimator.SetBool ("charge", true);
+		}
+		if (Input.GetMouseButtonUp (0)) {
+			myAnimator.SetBool ("charge", false);
+		}
+
+		//myAnimator.SetBool ("charge", Input.GetMouseButton(0));
+	}
+
 	void FixedUpdate()
 	{
 		float horizontal = Input.GetAxis ("Horizontal");
@@ -46,23 +57,5 @@ public class Player : MonoBehaviour {
 			transform.localScale = theScale;
 		}
 	}
-
-	void OnTriggerEnter2D (Collider2D c) {
-		if (c.gameObject.tag == "kickable") {
-			if (Input.GetMouseButtonDown (0)) {
-				Debug.Log ("kick ready " + gameObject.name);
-				myAnimator.SetBool ("charge", true);
-			}
-		}
-		else if (c.gameObject.tag == "kickable" && Input.GetMouseButtonUp (0)) {
-			myAnimator.SetBool("charge", false);
-		} 
-	}
-
-	void OnTriggerExit2D (Collider2D c) {
-		if (c.gameObject.tag == "kickable") {
-			myAnimator.SetBool("finishkick", true);
-		}	
-}
 }
 

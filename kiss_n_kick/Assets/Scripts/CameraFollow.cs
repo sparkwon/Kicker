@@ -32,6 +32,7 @@ public class CameraFollow : MonoBehaviour {
 	void Update()
 	{
 		camSize = Camera.main.orthographicSize;	
+		timeLerpValue = timeLerp * Time.deltaTime;
 
 
 	}
@@ -43,12 +44,16 @@ public class CameraFollow : MonoBehaviour {
 			Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
 	}
 
-	void ZoomIn()
+	void ZoomOut()
 	{
+		if (Camera.main.orthographicSize < camSizeLimit) {
+			Mathf.Lerp (Camera.main.orthographicSize, Camera.main.orthographicSize + increment, timeLerp * Time.deltaTime);
 		
+		} else if (Camera.main.orthographicSize > camSizeLimit) {
+		}
 	}
 
-	void ZoomOut()
+	void ZoomIn()
 	{
 	}
 }

@@ -9,7 +9,6 @@ public class BallForce : MonoBehaviour {
 	bool ballMoving = false;
 
 	float launchForce = 5;
-	public float launchCalc;
 
 	public float trajectoryPathCompensation;
 	//public float maxDragDistance = 2f;
@@ -19,8 +18,6 @@ public class BallForce : MonoBehaviour {
 
 	//public Rigidbody2D kickPoint;
 	Rigidbody2D rb;
-
-
 
 	//Variables for arc renderer
 	public LineRenderer sightLine;

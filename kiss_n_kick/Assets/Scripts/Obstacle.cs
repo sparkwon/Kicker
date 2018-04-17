@@ -14,7 +14,8 @@ public class Obstacle : MonoBehaviour {
 	}
 
 
-	void ObstacleGone()
+	/*
+	void ObstacleDystroy()
 		if
 
 	public void SetObstacleState (int state)
@@ -22,4 +23,5 @@ public class Obstacle : MonoBehaviour {
 		if (state)
 			
 	}
+	*/
 }

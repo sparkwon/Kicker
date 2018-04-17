@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 	GameObject[] switches;
 
 	[SerializeField]
-	GameObject exitDoor;
+	GameObject obstacle;
 
-	int noOfSwitches = 0;
+//	int noOfSwitches = 0;
 
 	[SerializeField]
 	Text switchCount;
@@ -19,39 +19,51 @@ public class GameManager : MonoBehaviour
 
 	void Start()
 	{
-		GetNoOfSwitches ();
+//		noOfSwitches = switches.Length;
+//		GetNoOfSwitches ();
 	}
 
-	public int GetNoOfSwitches()
+//	public int GetNoOfSwitches()
+//	{
+//		int x = 0;
+//
+//		for (int i = 1; i < switches.Length; i++) 
+//		{
+//			if (switches [i].GetComponent<Switch> ().isOn == false)
+//				x++; 
+//
+//			else if (switches[i].GetComponent<Switch>().isOn == true)
+//				noOfSwitches--;
+//		}
+//
+//		noOfSwitches = x;
+//
+//		return noOfSwitches;
+//	}
+
+
+	public void GetObstacleState()
 	{
-		int x = 0;
-
-		for (int i = 1; i < switches.Length; i++) 
-		{
-			if (switches [i].GetComponent<Switch> ().isOn == false)
-				x++; 
-
-			else if (switches[i].GetComponent<Switch>().isOn == true)
-				noOfSwitches--;
+		
+		if (AllSwitchesOn()) {
+			Destroy (obstacle); 
 		}
-
-		noOfSwitches = x;
-
-		return noOfSwitches;
 	}
 
-	/*
-	public void GetExitDoorState()
-	{
-		if (noOfSwitches <= 0) {
-			exitDoor.GetComponenet<exitDoor> ().OpenDoor ();
+	bool AllSwitchesOn () {
+		for (int i = 0; i < switches.Length; i++) {
+			if (!switches [i].GetComponent<Switch> ().isOn) {
+				return false;
+			}
 		}
+
+		return true;
 	}
 
 	void Update()
 	{
-		switchCount.text = GetNoOfSwitches ().ToString ();
-		GetExitDoorState ();
+		//switchCount.text = GetNoOfSwitches ().ToString ();
+		GetObstacleState ();
 	}
-	*/
+
 }

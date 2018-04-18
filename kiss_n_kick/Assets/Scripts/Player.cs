@@ -12,6 +12,22 @@ public class Player : MonoBehaviour {
 
 	private bool facingRight;
 
+	[SerializeField] 
+	private Transform[] groundPoints;
+
+	[SerializeField] 
+	private float groundRadius;
+
+	[SerializeField] 
+	private LayerMask whatIsGround;
+
+	private bool isGrounded;
+
+	private bool jump;
+
+	[SerializeField] 
+	private float jumpForce;
+
 	void Start()
 	{
 		facingRight = true;	//starting off facing right
@@ -26,17 +42,26 @@ public class Player : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			myAnimator.SetBool ("charge", false);
 		}
+		if (Input.GetKeyDown (KeyCode.Space)) 
+		{
+			jump = true;
+		}
 
-		//myAnimator.SetBool ("charge", Input.GetMouseButton(0));
 	}
 
 	void FixedUpdate()
 	{
 		float horizontal = Input.GetAxis ("Horizontal");
 
+		isGrounded = IsGrounded ();
+
 		HandleMovement (horizontal);
 
+		ResetValues ();
+
 		Flip (horizontal);
+
+
 	}
 
 	private void HandleMovement(float horizontal)
@@ -44,6 +69,12 @@ public class Player : MonoBehaviour {
 		myRigidbody.velocity = new Vector2 (horizontal * movementSpeed, myRigidbody.velocity.y);
 
 		myAnimator.SetFloat ("speed", Mathf.Abs(horizontal));
+
+		if (isGrounded && jump) 
+		{
+			isGrounded = false;
+			myRigidbody.AddForce (new Vector2 (0, jumpForce));
+		}
 	}
 
 	private void Flip (float horizontal)	//for looking the correct direction while walking
@@ -57,5 +88,30 @@ public class Player : MonoBehaviour {
 			transform.localScale = theScale;
 		}
 	}
-}
 
+	private void ResetValues ()
+	{
+		jump = false;
+	}
+
+
+	private bool IsGrounded()
+	{
+		if (myRigidbody.velocity.y <= 0) //checks if player is standing on ground
+		{ 
+			foreach (Transform point in groundPoints) 
+			{
+				Collider2D[] colliders = Physics2D.OverlapCircleAll (point.position, groundRadius, whatIsGround);
+
+				for (int i = 0; i < colliders.Length; i++) 
+				{
+					if (colliders [i].gameObject != gameObject) 
+					{
+						return true;	//return true when feet are colliding on floor
+					}
+				}
+			}
+		}
+		return false;	//return false if not
+	}
+}

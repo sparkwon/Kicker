@@ -52,8 +52,12 @@ public class BallForce : MonoBehaviour {
 				isDraggingOnBall = false;
 
 				// code here for launching ball. Middle of circle - mouse pos
-				Vector2 angle = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+				float maxMagnitude = 1.2f;
+				Vector2 angle = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);	//the direction of ball
+				if (angle.magnitude > maxMagnitude) {
+					angle = angle.normalized * maxMagnitude;
+				}
+					
 
 				//Debug.Log ("shooting? magnitude: " + (angle * launchForce).magnitude);
 				rb.AddForce (angle * launchForce, ForceMode2D.Impulse);

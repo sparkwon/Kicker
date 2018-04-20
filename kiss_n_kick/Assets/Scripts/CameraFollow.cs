@@ -15,11 +15,6 @@ public class CameraFollow : MonoBehaviour {
 
 	private Transform target;
 
-	public float camSize;
-	public float camSizeLimit;
-	public float increment;
-	public float timeLerp;
-	public float timeLerpValue;
 
 
 
@@ -31,8 +26,6 @@ public class CameraFollow : MonoBehaviour {
 
 	void Update()
 	{
-		camSize = Camera.main.orthographicSize;	
-		timeLerpValue = timeLerp * Time.deltaTime;
 
 
 	}
@@ -44,16 +37,5 @@ public class CameraFollow : MonoBehaviour {
 			Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
 	}
 
-	void ZoomOut()
-	{
-		if (Camera.main.orthographicSize < camSizeLimit) {
-			Mathf.Lerp (Camera.main.orthographicSize, Camera.main.orthographicSize + increment, timeLerp * Time.deltaTime);
-		
-		} else if (Camera.main.orthographicSize > camSizeLimit) {
-		}
-	}
 
-	void ZoomIn()
-	{
-	}
 }

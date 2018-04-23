@@ -27,9 +27,12 @@ public class BallForce : MonoBehaviour {
 	private Collider _hitObject;
 	public Collider hitObject {get {return _hitObject;}}
 
+	Animator anim;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 		//sightLine.startWidth (.1f);
 	}
 	
@@ -50,6 +53,8 @@ public class BallForce : MonoBehaviour {
 
 			if (Input.GetMouseButtonUp (0)) {
 				isDraggingOnBall = false;
+
+				anim.SetTrigger ("kicked");
 
 				// code here for launching ball. Middle of circle - mouse pos
 				float maxMagnitude = 1.2f;

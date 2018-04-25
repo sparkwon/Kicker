@@ -28,6 +28,8 @@ public class Player : MonoBehaviour {
 	[SerializeField] 
 	private float jumpForce;
 
+	public AudioSource jumpAudio;
+
 	void Start()
 	{
 		facingRight = true;	//starting off facing right
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour {
 		{
 			isGrounded = false;
 			myRigidbody.AddForce (new Vector2 (0, jumpForce));
+			jumpAudio.Play ();
 		}
 	}
 

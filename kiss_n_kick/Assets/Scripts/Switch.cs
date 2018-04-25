@@ -14,10 +14,14 @@ public class Switch : MonoBehaviour
 
 	Animator anim;
 
+	private CircleCollider2D popTrigger;
+
 	void Start()
 	{
-		anim = GetComponent<Animator> ();
+		popTrigger = GetComponent <CircleCollider2D> ();
 
+		anim = GetComponent<Animator> ();
+		popTrigger.enabled = true;
 
 		//sets switch to off sprite
 		//gameObject.GetComponent<SpriteRenderer> ().sprite = SwitchOff.GetComponent<SpriteRenderer > ().sprite;
@@ -25,12 +29,15 @@ public class Switch : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		//set the switch to on sprite
-		//gameObject.GetComponent<SpriteRenderer> ().sprite = switchOn.GetComponent<SpriteRenderer> ().sprite;
+		if (col.gameObject.tag == "kickable") {
+			//set the switch to on sprite
+			//gameObject.GetComponent<SpriteRenderer> ().sprite = switchOn.GetComponent<SpriteRenderer> ().sprite;
+			popTrigger.enabled = false;
+			anim.SetTrigger ("burst");
+			GetComponent<AudioSource> ().Play ();﻿
 
-		anim.SetTrigger ("burst");
-
-		isOn = true;
+			isOn = true;
+		}
 	}
 	
 }

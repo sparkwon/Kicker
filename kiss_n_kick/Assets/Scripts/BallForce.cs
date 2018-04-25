@@ -29,6 +29,9 @@ public class BallForce : MonoBehaviour {
 
 	Animator anim;
 
+	public AudioSource kickAudio;	//for kicking sound
+	public AudioSource landAudio;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -54,6 +57,7 @@ public class BallForce : MonoBehaviour {
 			if (Input.GetMouseButtonUp (0)) {
 				isDraggingOnBall = false;
 
+				kickAudio.Play ();
 				anim.SetTrigger ("kicked");
 
 				// code here for launching ball. Middle of circle - mouse pos
@@ -83,7 +87,7 @@ public class BallForce : MonoBehaviour {
 			Debug.Log("hit ground: " + gameObject.name);
 			rb.velocity = Vector3.zero;
 			rb.angularVelocity = 0f;
-			transform.eulerAngles = Vector3.zero;
+			//transform.eulerAngles = Vector3.zero;
 			ballMoving = false;
 
 		}
@@ -95,12 +99,14 @@ public class BallForce : MonoBehaviour {
 		}
 		else if (c.gameObject.tag == "ground") {
 			ballMoving = true;
+			landAudio.Play ();
 		} 
 	}
 
 	void OnTriggerExit2D (Collider2D c) {
 		if (c.gameObject.tag == "Player") {
 			inShootMode = false;
+			sightLine.enabled = false;
 		}
 
 		//else if 

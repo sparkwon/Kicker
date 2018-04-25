@@ -11,37 +11,14 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	GameObject obstacle;
 
-//	int noOfSwitches = 0;
-
 	[SerializeField]
 	Text switchCount;
 
-
 	void Start()
 	{
-//		noOfSwitches = switches.Length;
-//		GetNoOfSwitches ();
+
 	}
-
-//	public int GetNoOfSwitches()
-//	{
-//		int x = 0;
-//
-//		for (int i = 1; i < switches.Length; i++) 
-//		{
-//			if (switches [i].GetComponent<Switch> ().isOn == false)
-//				x++; 
-//
-//			else if (switches[i].GetComponent<Switch>().isOn == true)
-//				noOfSwitches--;
-//		}
-//
-//		noOfSwitches = x;
-//
-//		return noOfSwitches;
-//	}
-
-
+		
 	public void GetObstacleState()
 	{
 		

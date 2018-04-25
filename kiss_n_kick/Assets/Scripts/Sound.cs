@@ -9,6 +9,8 @@ public class Sound : MonoBehaviour {
 	public GameObject audioSourcePrefab;
 	public AudioSource[] audioSources;
 
+	public AudioClip themeMusic;
+
 	void Awake () {
 		/*
 			this is the standard way of setting up a singleton
@@ -21,26 +23,28 @@ public class Sound : MonoBehaviour {
 		else {
 			Destroy(this.gameObject);
 		}
-	}
 
-
-
-	void Start () {
 		// initialize the array of audiosources
 		audioSources = new AudioSource[64];
 
 		// populating the array with audiosources by instantiating our audiosource prefab
 		for(int i = 0; i < audioSources.Length; i++) {
 			audioSources[i] = (Instantiate(audioSourcePrefab) as GameObject).GetComponent<AudioSource>();
-			audioSources[i].transform.SetParent(transform);	//gameobject sounds all become children of audio sources
+			audioSources[i].transform.SetParent(transform);
 		}
 	}
-	
+
+
+
+	void Start () {
+		Sound.me.PlaySound(themeMusic, 0.25f, 1f, true);
+	}
+
 	// base method for playing a sound. give it a clip, volume, pitch, and optionally a bool for if it should loop
 	public AudioSource PlaySound (AudioClip clip, float volume, float pitch, bool loop = false) {
 		// calling the GetSourceIndex method from this script that gives us an audiosource that is not currently playing
 		int index = GetSourceIndex();
-		
+
 		// assign the various details about the audiosource that we passed as arguments to this method
 		audioSources[index].clip = clip;
 		audioSources[index].volume = volume;
@@ -73,6 +77,13 @@ public class Sound : MonoBehaviour {
 		// if you get here, you've checked all audiosources and they're all playing. returning a default value and sending a console message
 		Debug.Log("all audiosources are currently playing, returning index 0");
 		return 0;
+	}
+
+	public AudioSource PlaySoundJitter (AudioClip clip, float maxVolume, float volumeDelta, float maxPitch, float pitchDelta) {
+		float volume = maxVolume - Random.Range(0, volumeDelta);
+		float pitch = maxPitch - Random.Range(0, pitchDelta);
+
+		return PlaySound(clip, volume, pitch);
 	}
 
 	// method to stop a sound 

@@ -1,25 +1,60 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Exit_open : MonoBehaviour {
 
+	[SerializeField]
+	GameObject[] switches;
+
+	//[SerializeField]
+	//GameObject obstacle;
+
+	[SerializeField]
+	Text switchCount;
+
 	Animator anim;
+
+	private BoxCollider2D levelTrigger;
+
+	//public AudioSource openAudio;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		levelTrigger = GetComponent <BoxCollider2D> ();
+
+		levelTrigger.enabled = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-		
-	}
+	public void GetExitState()
+	{
 
-	void OnTriggerEnter2D (Collider2D c) {
-		if (c.gameObject.tag == "Player") {
+		if (AllSwitchesOn()) {
+			//Destroy (obstacle); 
 			anim.SetTrigger ("open");
+			//openAudio.Play ();
+			levelTrigger.enabled = true;
 		}
 	}
+
+	bool AllSwitchesOn () {
+		for (int i = 0; i < switches.Length; i++) {
+			if (!switches [i].GetComponent<Switch> ().isOn) {
+				return false;
+
+			}
+		}
+
+		return true;
+
+	}
+
+	void Update()
+	{
+		//switchCount.text = GetNoOfSwitches ().ToString ();
+		GetExitState ();
+	}
+
 }

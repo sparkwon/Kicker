@@ -12,7 +12,7 @@ public class Parallax : MonoBehaviour
 
 	private Transform cameraTransform;	//track camera
 	private Transform[] layers;	
-	private float viewZone = 7;
+	private float viewZone = 6;
 	private int leftIndex;
 	private int rightIndex;
 	private float lastCameraX;

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e7744422c2be145b7a1724a333ec1c7e
+timeCreated: 1524669460
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rocko
+  fontNames:
+  - Rocko
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

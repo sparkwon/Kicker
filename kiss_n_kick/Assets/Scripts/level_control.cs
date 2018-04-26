@@ -11,6 +11,7 @@ public class level_control : MonoBehaviour {
 	public Image black;
 	public Animator anim;
 
+
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.CompareTag ("Player")) 

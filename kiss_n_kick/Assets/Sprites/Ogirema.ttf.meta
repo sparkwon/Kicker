@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5f10247c21905445c8d0c705d21be022
+timeCreated: 1524670539
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ogirema
+  fontNames:
+  - Ogirema
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 09d03e0157e65442cab955489db700ac, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
